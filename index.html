@@ -1,0 +1,412 @@
+<!DOCTYPE html>  <html lang="en">  <head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+   <title>EcoExchange | AI Powdered Waste-to-Reward Platform</title>   
+    <link rel="stylesheet" href="style.css">  
+
+  </head> 
+  
+  <body>   
+ 
+  <!-- ================= HEADER ================= -->
+
+<header>
+
+  <div class="logo">
+    ♻️ EcoExchange
+  </div>
+
+
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav>
+
+    <a href="#about">About</a>
+
+    <a href="#features">Features</a>
+
+    <a href="#upload">Upload Waste</a>
+
+    <a href="#leaderboard">Leaderboard</a>
+
+  </nav>
+
+
+
+
+  <!-- ================= LANGUAGE SELECT ================= -->
+
+  <div class="language-box">
+
+    <select
+      id="languageSelect"
+      onchange="changeLanguage()"
+    >
+
+      <option value="en">
+        English
+      </option>
+
+      <option value="hi">
+        हिन्दी
+      </option>
+
+      <option value="de">
+        German
+      </option>
+
+      <option value="es">
+        Spanish
+      </option>
+
+      <option value="fr">
+        French
+      </option>
+
+    </select>
+
+  </div>
+
+</header>
+   <!-- ================= HERO SECTION ================= -->   
+    
+   <section class="hero"> 
+    
+    <div class="hero-overlay">  
+
+  <h1>Turn Waste Into Rewards</h1>  
+
+  <p>  
+    AI-powered platform that helps people recycle waste responsibly  
+    and earn EcoPoints while saving the environment.  
+  </p>  
+
+  <a href="#upload" class="hero-btn">  
+    Start Recycling  
+  </a>  
+
+</div>
+
+  </section>   
+  
+  <!-- ================= ABOUT ================= -->  
+  
+  <section class="about" id="about">
+    
+    <h2>🌍 Why EcoExchange?</h2>  
+
+<div class="about-container">  
+
+  <div class="about-card">  
+    <h3>♻️ Smart Recycling</h3>  
+
+    <p>  
+      Users can submit waste details and connect with NGOs  
+      for responsible waste collection.  
+    </p>  
+  </div>  
+
+  <div class="about-card">  
+    <h3>🏆 Reward System</h3>  
+
+    <p>  
+      Every contribution earns EcoPoints to motivate  
+      people for eco-friendly actions.  
+    </p>  
+  </div>  
+
+  <div class="about-card">  
+    <h3>🤖 AI Analysis</h3>  
+
+    <p>  
+      AI provides eco tips based on waste type and  
+      helps users understand recycling impact.  
+    </p>  
+  </div>  
+
+</div>
+
+  </section>  
+  
+  <!-- ================= FEATURES ================= -->  
+
+
+    <section class="features" id="features">
+        <h2>🚀 Platform Features</h2>  
+
+<div class="feature-grid">  
+
+  <div class="feature-box">  
+    <img src="https://cdn-icons-png.flaticon.com/512/1048/1048941.png">  
+
+    <h3>Plastic Waste</h3>  
+
+    <p>  
+      Proper collection and recycling of plastic materials.  
+    </p>  
+  </div>  
+
+  <div class="feature-box">  
+    <img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png">  
+
+    <h3>E-Waste</h3>  
+
+    <p>  
+      Safe disposal of batteries, phones and electronic items.  
+    </p>  
+  </div>  
+
+  <div class="feature-box">  
+    <img src="https://cdn-icons-png.flaticon.com/512/2909/2909763.png">  
+
+    <h3>Religious Waste</h3>  
+
+    <p>  
+      Flowers and pooja waste converted into compost & incense sticks.  
+    </p>  
+  </div>  
+
+  <div class="feature-box">  
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png">  
+
+    <h3>Rewards</h3>  
+
+    <p>  
+      Earn EcoPoints and become a Top Eco Warrior.  
+    </p>  
+  </div>  
+
+</div>
+
+  </section> 
+    <!-- ================= UPLOAD SECTION ================= --> 
+     
+  <section class="upload-section" id="upload"> 
+    <h2>📦 Upload Waste Details</h2>  
+    <div class="form-container"> 
+     <!-- NAME -->  
+
+<input  
+  type="text"  
+  id="name"  
+  placeholder="Enter Your Name"  
+>  
+
+
+
+<!-- PHONE NUMBER -->  
+
+<input  
+  type="tel"  
+  id="phone"  
+  placeholder="Enter Phone Number"  
+  maxlength="10"  
+>  
+
+
+
+<!-- EMAIL -->  
+
+<input  
+  type="email"  
+  id="email"  
+  placeholder="Enter Gmail Address"  
+>  
+
+<!-- OTP / VERIFICATION CODE --> 
+ <div class="verification-box"> 
+   <button
+type="button"
+class="send-otp-btn"
+onclick="sendOTP()" > 
+
+Send Verification Code
+
+  </button>  <input
+type="text"
+id="otp"
+placeholder="Enter Verification Code"
+
+> 
+
+<button
+type="button"
+class="verify-btn"
+onclick="verifyNumber()"
+
+> 
+
+Verify
+
+  </button>  </div>  <!-- WASTE TYPE -->  
+
+<select id="wasteType">  
+
+  <option value="">Select Waste Type</option>  
+
+  <option>Plastic</option>  
+
+  <option>Paper</option>  
+
+  <option>E-Waste</option>  
+
+  <option>Religious Waste</option>  
+
+  <option>Metal</option>  
+
+</select>  
+
+
+
+<!-- WEIGHT -->  
+
+<input  
+  type="number"  
+  id="weight"  
+  placeholder="Approx Weight (kg)"  
+  min="1"  
+>  
+
+
+
+<!-- LOCATION -->  
+
+<input  
+  type="text"  
+  id="location"  
+  placeholder="Enter Your Location"  
+>  
+
+
+
+<!-- DATE -->  
+
+<input  
+  type="date"  
+  id="date"  
+>  
+
+
+
+<!-- DETAILS -->  
+
+<textarea  
+  id="details"  
+  rows="5"  
+  placeholder="Describe your waste..."  
+></textarea>  
+
+
+
+<!-- SUBMIT BUTTON -->  
+
+<button onclick="submitWaste()">  
+
+  Submit Waste  
+
+</button>
+
+  </div>    <!-- ================= AI RESULT ================= --> 
+     <div id="aiResult" class="ai-result"></div> 
+     </section>  
+       <!-- ================= IMPACT STATS ================= -->
+        
+     <section class="stats">  
+      <h2>📊 Environmental Impact</h2>  
+
+<div class="stats-container">  
+
+  <div class="stat-box">  
+    <h1>500+</h1>  
+    <p>Kg Waste Recycled</p>  
+  </div>  
+
+  <div class="stat-box">  
+    <h1>1200+</h1>  
+    <p>Users Joined</p>  
+  </div>  
+
+  <div class="stat-box">  
+    <h1>300kg</h1>  
+    <p>CO₂ Reduced</p>  
+  </div>  
+
+</div>
+
+  </section>    <!-- ================= LEADERBOARD ================= -->  
+    <section class="leaderboard-section" id="leaderboard"> 
+       <h2>🏆 Top Eco Warriors</h2>  
+
+<table>  
+
+  <thead>  
+
+    <tr>  
+      <th>Rank</th>  
+      <th>Name</th>  
+      <th>EcoPoints</th>  
+    </tr>  
+
+  </thead>  
+
+  <tbody id="leaderboardBody">  
+
+  </tbody>  
+
+</table>
+
+  </section>   
+
+  <!-- ================= REWARDS SECTION ================= -->
+
+<section class="rewards-section">
+
+  <h2>💰 Redeem EcoPoints</h2>
+
+  <div class="reward-box">
+
+    <h3 id="rewardPoints">
+      Your EcoPoints: 0
+    </h3>
+
+    <h3 id="rewardMoney">
+      Reward Value: ₹0
+    </h3>
+
+    <button onclick="redeemPoints()">
+
+      Redeem Rewards
+
+    </button>
+
+  </div>
+
+</section>
+  
+  <!-- ================= QR SECTION ================= --> 
+    <section class="qr-section">   
+     <h2>📱 Scan To Visit EcoExchange</h2>  
+    <p>  
+    Open our Waste-to-Reward platform instantly  
+  </p> 
+   <img
+src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://ecoexchange.netlify.app"
+alt="QR Code"> 
+
+</section>    <!-- ================= FOOTER ================= --> 
+   <footer> 
+   <h3>♻️ EcoExchange</h3>  
+
+<p>  
+  SDG 11 • SDG 12 • SDG 13  
+</p>  
+
+<p>  
+  Clean Environment • Smart Recycling • Green Future  
+</p>
+
+  </footer>    
+  <script src="script.js"></script>
+  </body>  
+</html>
